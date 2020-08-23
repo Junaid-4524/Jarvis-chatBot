@@ -1,0 +1,47 @@
+# Jarvis-chatBot
+
+import pyttsx3
+import os
+
+pyttsx3.speak("Welcome sir")
+pyttsx3.speak("Jarwis here, how i can assist you")
+
+
+while True:
+    p = input("chat with me with your requirements : ")
+
+    if ((("run" in p) or ("open" in p ) or ("khuljasimsim" in p )) and ("chrome" in p)) :
+        pyttsx3.speak("Opening Chrome")
+        os.system("chrome")
+
+    elif (("run" in p) or  ("open" in p )) and (("notepad" in p) or ("editor" in p) ) :
+        pyttsx3.speak("Opening notepad")
+        os.system("notepad")
+
+    elif (("facebook" in p) or ("fb" in p) ) :
+        pyttsx3.speak('opening facebook')
+        os.system('start  http://www.facebook.com/')
+
+    elif ('notepad++' in p) or ('pad editor' in p):
+        pyttsx3.speak('Launching your notepad++')
+        os.system('notepad')
+        
+    elif (('mozilla' in p) or ('firefox' in p) or ('web' in p)):
+        pyttsx3.speak('opening Mozilla firefox')
+        os.system('firefox')
+
+    elif ('calculator' in p):
+        pyttsx3.speak('Opening your calculator')
+        os.system('calc')        
+
+    elif (("run" in p) or  ("open" in p ))  and ("player" in p) and ("media" in p) :
+        pyttsx3.speak("Opening Media Player")
+        os.system("wmplayer")
+
+    elif ("exit" in p)  or ("quit" in p):
+        pyttsx3.speak("see you again ,bye bye sir ")
+        break
+
+    else:
+        print("not found")
+        pyttsx3.speak("sorry sir , i am unable to locate the software")
